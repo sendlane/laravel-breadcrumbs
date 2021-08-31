@@ -3,7 +3,7 @@
     <ul>
         @foreach ($breadcrumbs as $breadcrumb)
 
-            @if ($loop->last)
+            @if ($loop->last ?? null)
                 <li class="current">{{ $breadcrumb->title }}</li>
             @elseif ($breadcrumb->url)
                 <li><a href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }}</a></li>

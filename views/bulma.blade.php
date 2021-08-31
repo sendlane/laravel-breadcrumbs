@@ -4,7 +4,7 @@
         <ul>
             @foreach ($breadcrumbs as $breadcrumb)
 
-                @if ($loop->last)
+                @if ($loop->last ?? null)
                     @if ($breadcrumb->url)
                         <li class="is-active"><a href="{{ $breadcrumb->url }}" aria-current="page">{{ $breadcrumb->title }}</a></li>
                     @else

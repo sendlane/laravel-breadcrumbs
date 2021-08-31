@@ -1,7 +1,7 @@
 @if (count($breadcrumbs))
     <ul class="uk-breadcrumb">
         @foreach ($breadcrumbs as $breadcrumb)
-            @if ($loop->last)
+            @if ($loop->last ?? null)
                 <li><span>{{ $breadcrumb->title }}</span></li>
             @elseif ($breadcrumb->url)
                 <li><a href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }}</a></li>

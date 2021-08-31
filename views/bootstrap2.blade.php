@@ -2,7 +2,7 @@
 
     <ul class="breadcrumb">
         @foreach ($breadcrumbs as $breadcrumb)
-            @if ($loop->last)
+            @if ($loop->last ?? null)
 
                 <li class="active">
                     {{ $breadcrumb->title }}

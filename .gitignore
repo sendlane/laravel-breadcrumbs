@@ -2,6 +2,9 @@
 /composer.lock
 /vendor/
 
+# Git
+.idea/
+
 # Test output
 /.phpunit.result.cache
 /build/

@@ -5,7 +5,7 @@
             <div class="col s12">
                 @foreach ($breadcrumbs as $breadcrumb)
 
-                    @if ($breadcrumb->url && !$loop->last)
+                    @if ($breadcrumb->url && !($loop->last ?? null))
                         <a href="{{ $breadcrumb->url }}" class="breadcrumb">{{ $breadcrumb->title }}</a>
                     @else
                         <span class="breadcrumb">{{ $breadcrumb->title }}</span>
